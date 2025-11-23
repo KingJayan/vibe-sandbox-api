@@ -1,5 +1,6 @@
 {
   "name": "vibe-sandbox",
+  "author": "KingJayan",
   "version": "1.0.0",
   "description": "A framework-agnostic TypeScript library for generating aesthetic UI themes, animations, and style presets",
   "main": "./dist/index.cjs",
