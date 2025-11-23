@@ -31,11 +31,34 @@ registerEffect('darken', (theme) => {
 const darkVibe = createVibe({ preset: 'cosmic', effects: ['darken'] });
 ```
 
-## Presets
+## Presets (15 Total)
 
-- **cosmic**: Deep blues, purples, star/particle settings, soft glow
-- **soft-neon**: Neon accents, dark base, slight pulsing animations
-- **retro-terminal**: Green/amber monochrome palette, scanline effect configs
+### Futuristic
+- **cosmic**: Deep blues and purples with soft glowing effects
+- **soft-neon**: Neon accents on dark backgrounds with pulsing energy
+- **cyberpunk**: High-tech dystopian with electric cyan and hot pink
+- **synthwave**: Retro-futuristic 80s aesthetic with pink and purple gradients
+
+### Minimalist
+- **brutalist**: Bold, stark design with hard shadows and primary colors
+- **glassmorphism**: Frosted glass effect with soft transparency
+
+### Organic / Nature
+- **pastel-dream**: Soft pastel colors creating a dreamy atmosphere
+- **forest-canopy**: Deep forest greens evoking natural tranquility
+- **desert-sunset**: Warm desert tones with sunset orange and terracotta
+- **nature-zen**: Calming nature-inspired palette for wellness
+
+### Retro
+- **retro-terminal**: Classic green terminal aesthetic
+- **arcade**: Classic arcade game aesthetic with bright primary colors
+- **vaporwave**: 90s internet aesthetic with pink, cyan, and purple
+
+### Professional
+- **mocha-mousse**: Pantone 2025 Color of the Year - warm, comforting mocha tones
+- **midnight-ocean**: Deep ocean blues for professional interfaces
+
+[View all preset details with categories and tags →](./docs/api.md#presets)
 
 ## Features
 
@@ -53,6 +76,7 @@ const darkVibe = createVibe({ preset: 'cosmic', effects: ['darken'] });
 See the [docs](./docs) folder for detailed documentation:
 - [Overview](./docs/overview.md)
 - [API Reference](./docs/api.md)
+- [Framework Examples](./docs/framework-examples.md) - React, Next.js, Vue, and Svelte integration guides
 
 ## License
 

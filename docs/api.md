@@ -88,6 +88,50 @@ Generate CSS keyframe animation strings.
 
 Generate motion style object for inline use.
 
+## Presets
+
+Vibe Sandbox includes 15 beautifully crafted presets across 5 categories:
+
+### Futuristic (4 presets)
+- `cosmic` - Deep blues and purples with soft glowing effects
+- `soft-neon` - Neon accents on dark backgrounds with pulsing energy
+- `cyberpunk` - High-tech dystopian with electric cyan and hot pink
+- `synthwave` - Retro-futuristic 80s aesthetic with pink and purple gradients
+
+### Minimalist (2 presets)
+- `brutalist` - Bold, stark design with hard shadows and primary colors
+- `glassmorphism` - Frosted glass effect with soft transparency
+
+### Organic / Nature (4 presets)
+- `pastel-dream` - Soft pastel colors creating a dreamy atmosphere
+- `forest-canopy` - Deep forest greens evoking natural tranquility
+- `desert-sunset` - Warm desert tones with sunset orange and terracotta
+- `nature-zen` - Calming nature-inspired palette for wellness
+
+### Retro (3 presets)
+- `retro-terminal` - Classic green terminal aesthetic
+- `arcade` - Classic arcade game aesthetic with bright primary colors
+- `vaporwave` - 90s internet aesthetic with pink, cyan, and purple
+
+### Professional (2 presets)
+- `mocha-mousse` - Pantone 2025 Color of the Year - warm, comforting mocha tones
+- `midnight-ocean` - Deep ocean blues for professional interfaces
+
+### Filtering Presets
+
+```typescript
+import { listPresets } from 'vibe-sandbox';
+
+// Get all presets
+const all = listPresets();
+
+// Filter by category
+const futuristic = listPresets({ category: 'futuristic' });
+
+// Filter by tag
+const darkThemes = listPresets({ tag: 'dark' });
+```
+
 ## Complete Examples
 
 ### Basic Usage
