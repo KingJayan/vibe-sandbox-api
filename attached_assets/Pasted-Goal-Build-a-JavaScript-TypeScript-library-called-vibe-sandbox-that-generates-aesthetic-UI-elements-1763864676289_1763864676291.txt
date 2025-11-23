@@ -1,0 +1,138 @@
+Goal:
+Build a JavaScript/TypeScript library called vibe-sandbox that generates aesthetic UI elements, animations, and style presets based on simple “vibe” configurations. This should be a standalone API/library — not a full app — with clear, reusable functions.
+
+Core Requirements
+
+Project Setup
+
+Use TypeScript.
+
+Output should include both ESM + CJS builds.
+
+Provide proper package.json, tsconfig.json, and a clean folder structure (src/, dist/).
+
+No UI framework dependencies — keep it framework-agnostic (React demo can come later).
+
+Main Features
+Implement a core function:
+
+createVibe(config: VibeConfig): VibeTheme
+
+
+where:
+
+VibeConfig includes:
+
+preset?: string (e.g., "cosmic", "soft-neon", "retro-terminal")
+
+intensity?: number
+
+animation?: boolean
+
+VibeTheme returns:
+
+colors (palette for bg, text, accent)
+
+gradients
+
+shadows
+
+motion (duration, easing, spring values)
+
+particles config (optional)
+
+css — prebuilt CSS variables for easy drop-in use
+
+Preset System
+Add at least three presets:
+
+cosmic → deep blues, purples, star/particle settings, soft glow
+
+soft-neon → neon accents, dark base, slight pulsing animations
+
+retro-terminal → green/amber monochrome palette, scanline effect configs
+
+Each preset should be modular and extendable:
+
+const presets = {
+  cosmic: {...},
+  softNeon: {...},
+  retroTerminal: {...}
+}
+
+
+Animation Utilities
+Include a small animation utility section:
+
+easing functions
+
+CSS keyframe string generators
+
+helper motionStyle(vibeTheme) that outputs a bundled style object
+
+Output Format
+The API should allow two main usage styles:
+
+A. JS/TS object use
+
+const vibe = createVibe({ preset: "cosmic" });
+element.style.background = vibe.gradients.primary;
+
+
+B. Auto-generated CSS variables
+
+const cssVars = vibe.toCSS();
+// inject into <style> or export
+
+
+Extensibility
+Make the architecture plugin-friendly:
+
+registerPreset(name: string, data: VibePreset): void
+registerEffect(name: string, generator: Function): void
+
+
+Testing
+Add minimal tests for:
+
+preset loading
+
+theme generation
+
+CSS variable output
+
+Documentation Stubs
+Add placeholder Markdown files:
+
+/docs/overview.md
+
+/docs/api.md
+(Just stubs — I’ll fill these in later.)
+
+Deliverables
+
+Working TypeScript library with build scripts
+
+createVibe() with full preset system
+
+Animation + CSS utilities
+
+3 complete presets
+
+Plugin system
+
+Minimal tests
+
+Docs stubs
+
+Exported type definitions
+
+Extra Notes
+
+Keep the code clean and modular.
+
+Avoid anything frontend/framework-specific.
+
+The goal is an API that can be consumed by React, Next.js, Vue, Svelte, or vanilla HTML/CSS.
+
+No demo website needed — just the library.
